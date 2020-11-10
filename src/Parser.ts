@@ -173,6 +173,7 @@ class Parser {
     bsRules.forEach((bsRules) => {
       if (isBSRule(bsRules)) {
         bsRules.rule.forEach((bsRule) => {
+          bsRule.description = bsRule.description || [];
           rules.push({
             name: bsRule.$.name,
             description: bsRule.description[0] || '-'
